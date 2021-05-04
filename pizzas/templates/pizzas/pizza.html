@@ -4,9 +4,6 @@
 
 <p>Pizza: {{ pizza }}</p>
 
-<h2>
-    <p><img src="{{post.image.url}}" class="img-thumbnail" style="max-height:300px;" alt="No image"><br><br></p>
-</h2>
 
 <ul>
     {% for toppings in Toppings %}
@@ -20,5 +17,8 @@
     {% endfor %}
 </ul>
 
+<p>
+    <a href="{% url 'pizzas:new_topping' pizza.id %}">Add new topping</a>
+</p>
 
 {% endblock content %}
