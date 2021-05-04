@@ -86,7 +86,6 @@ def edit_topping(request, topping_id):
     context = {'toppings': toppings, 'pizza':pizza,'form': form}
     return render(request, 'pizzas/edit_topping.html', context)
 
-
 def comments(request,pizza_id):
     if request.method != 'POST' and request.POST.get('btn1'):
         comment = request.POST.get('comment')
